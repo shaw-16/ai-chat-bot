@@ -145,7 +145,7 @@ startBtn.addEventListener('click', async () => {
     await initVoice();   // ⏳ waits until browser voices are ready
 
     const introText =
-        "Hi, I’m Shashank Shekhar. This voice bot answers questions the way I would. Click the microphone button to begin.";
+        "Hi, I’m ayush shaw. This voice bot answers questions the way I would. Click the microphone button to begin.";
 
     speak(introText);
 });
