@@ -108,7 +108,7 @@ function speak(text) {
 // API Handler
 async function handleQuery(text) {
     try {
-        const response = await fetch('https://ai-chat-bot-7nh2.onrender.com/api/ask', {
+        const response = await fetch('https://ai-chat-bot-vdzc.onrender.com/api/ask', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ question: text })
