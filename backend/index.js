@@ -27,7 +27,169 @@ function getChatCompletion(messages) {
             model: "gpt-4o-mini", // or gpt-3.5-turbo
             messages: messages,
             temperature: 0.7
+        });require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(cors());
+app.use(bodyParser.json());
+
+// Load Personal Data
+const dataPath = path.join(__dirname, 'data', 'personal_data.json');
+
+let personalData = [];
+
+try {
+    const rawData = fs.readFileSync(dataPath, 'utf8');
+    personalData = JSON.parse(rawData);
+    console.log("Personal data loaded successfully.");
+} catch (error) {
+    console.error("Error loading personal data:", error);
+}
+
+// Chat Completion
+function getChatCompletion(messages) {
+    const apiKey = process.env.OPENAI_API_KEY;
+
+    if (!apiKey) {
+        return Promise.resolve(
+            "Configuration Error: No OpenAI API Key found in backend."
+        );
+    }
+
+    return new Promise((resolve) => {
+        const postData = JSON.stringify({
+            model: "gpt-4o-mini",
+            messages,
+            temperature: 0.7,
+            max_tokens: 300
         });
+
+        const options = {
+            hostname: 'api.openai.com',
+            path: '/v1/chat/completions',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Length': Buffer.byteLength(postData)
+            }
+        };
+
+        const req = https.request(options, (res) => {
+            let data = '';
+
+            res.on('data', chunk => {
+                data += chunk;
+            });
+
+            res.on('end', () => {
+                try {
+                    const parsed = JSON.parse(data);
+
+                    if (parsed.error) {
+                        console.error("LLM Error:", parsed.error);
+
+                        resolve(
+                            "I'm sorry, I'm having trouble thinking right now."
+                        );
+                        return;
+                    }
+
+                    resolve(
+                        parsed.choices?.[0]?.message?.content ||
+                        "No response generated."
+                    );
+
+                } catch (error) {
+                    console.error(error);
+                    resolve("Error parsing response.");
+                }
+            });
+        });
+
+        req.on('error', () => {
+            resolve("Connection error.");
+        });
+
+        req.write(postData);
+        req.end();
+    });
+}
+
+app.post('/api/ask', async (req, res) => {
+    const { question } = req.body;
+
+    if (!question) {
+        return res.status(400).json({
+            error: 'Question is required'
+        });
+    }
+
+    try {
+        console.log(`User asked: ${question}`);
+
+        // Build context from personal data
+        const contextText = personalData
+            .map(item => `${item.category}: ${item.content}`)
+            .join('\n\n');
+
+        const systemPrompt = `
+You are Ayush Shaw.
+
+You are answering as Ayush himself in a voice interview/chat.
+
+Below is information about Ayush:
+
+${contextText}
+
+Rules:
+- Answer naturally and confidently.
+- Keep answers concise (2–5 lines).
+- Speak in first person ("I", "my").
+- Only answer from the provided information.
+- If information is unavailable, say:
+"I don't have enough information about that."
+`;
+
+        const answer = await getChatCompletion([
+            {
+                role: "system",
+                content: systemPrompt
+            },
+            {
+                role: "user",
+                content: question
+            }
+        ]);
+
+        console.log(`Answer: ${answer}`);
+
+        res.json({ answer });
+
+    } catch (error) {
+        console.error(error);
+
+        res.status(500).json({
+            error: 'Internal Server Error'
+        });
+    }
+});
+
+app.get('/', (req, res) => {
+    res.send('Backend running successfully');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
 
         const options = {
             hostname: 'api.openai.com',
