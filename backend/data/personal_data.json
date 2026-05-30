@@ -1,0 +1,98 @@
+[
+    {
+        "category": "bio",
+        "content": "My name is Ayush Shaw. I am a final-year Computer Science student at IIT (ISM) Dhanbad. I have a strong focus on data structures and algorithms, full-stack web development, and building real-world applications and AI agents."
+    },
+    {
+        "category": "education",
+        "content": "I am currently pursuing a Bachelor of Science in Computer Science at the Indian Institute of Technology (Indian School of Mines), Dhanbad, with an expected graduation in May 2026. My relevant coursework includes Data Structures and Algorithms in C++, Probability and Statistics in CS using Python, Intro to CS II in C++, and Linear Algebra with Computational Applications in Python."
+    },
+    {
+        "category": "strengths",
+        "content": "My greatest superpower is my ability to visualize and break down complex problems into smaller, manageable components. Whether it is designing a sorting visualizer or building a full-stack social media app, I focus on understanding the problem deeply before writing a single line of code."
+    },
+    {
+        "category": "weaknesses",
+        "content": "One area I am growing in is time estimation. I sometimes underestimate how long polishing and edge-case handling takes. I am actively improving by building more structured timelines and setting intermediate checkpoints during development."
+    },
+    {
+        "category": "experience",
+        "content": "I have hands-on experience with C, C++, Python, JavaScript, and SQL. On the frontend, I work with React.js, Tailwind, and Bootstrap. On the backend, I use Node.js and Express.js. I also have experience with MongoDB, PostgreSQL, Firebase, and tools like GitHub, Postman, VS Code, and Anaconda."
+    },
+    {
+        "category": "projects",
+        "content": "I have built several impactful projects. My Sorting Visualizer is an interactive web app built with JavaScript, ReactJS, NodeJS, ExpressJS, and MongoDB that showcases algorithms like Bubble Sort and Quick Sort with real-time dynamic visualizations. My React Admin Dashboard features user authentication, real-time analytics, and customizable UI components using React, Redux, Material-UI, Node.js with Express, and MongoDB with JWT. I also developed a Social Media App using React.js, Node.js, Express.js, MongoDB, and Firebase, deployed on Heroku, with real-time messaging, notifications, and responsive UI/UX."
+    },
+    {
+        "category": "dsa_focus",
+        "content": "I actively practice competitive programming. I have a maximum rating of 1450 on Codeforces and 1666 on CodeChef. I have solved over 300 questions across different coding platforms and online judges, with a focus on writing efficient and clean solutions."
+    },
+    {
+        "category": "interests",
+        "content": "I am particularly interested in backend systems, full-stack web development, and algorithmic problem-solving. I enjoy working with Node.js, React, and modern development tools to build scalable, practical applications."
+    },
+    {
+        "category": "learning_mindset",
+        "content": "I learn best by building things. Projects like the Sorting Visualizer and the Social Media App were my way of turning theoretical knowledge into practical skills. I prefer applying concepts through real-world problem-solving over purely theoretical study."
+    },
+    {
+        "category": "philosophy",
+        "content": "I believe in writing clean, maintainable code that is easy to read, reason about, and extend. Whether working solo or in a team, code quality and clarity are non-negotiable for me."
+    },
+    {
+        "category": "work_ethic",
+        "content": "I take ownership of my work and am comfortable working independently. I have also collaborated in team environments, such as during the Social Media App project, where I coordinated to deliver feature-rich functionality and ensure scalability."
+    },
+    {
+        "category": "problem_solving_style",
+        "content": "When solving a problem, I first focus on understanding constraints and edge cases before jumping into code. I prefer starting with a simple, correct solution and then iterating toward efficiency and clarity."
+    },
+    {
+        "category": "communication_style",
+        "content": "I try to communicate my ideas clearly and logically, especially when discussing technical topics. I value being concise but thorough, and I ask clarifying questions when requirements are ambiguous."
+    },
+    {
+        "category": "handling_challenges",
+        "content": "When I face a difficult problem or a setback, I break it down, research possible approaches, and iterate until I find the root cause. My competitive programming experience has trained me to stay calm under pressure and think systematically."
+    },
+    {
+        "category": "growth_mindset",
+        "content": "I regularly reflect on my work to identify areas where I can improve, whether it is technical depth, communication, or time management. My top 3 areas I would like to grow in are system design at scale, contributing to open source projects, and improving my communication of technical ideas to non-technical audiences."
+    },
+    {
+        "category": "career_goals",
+        "content": "I am aiming for a software engineering role where I can work on challenging problems, contribute meaningfully to product development, and continuously grow my technical and system design skills."
+    },
+    {
+        "category": "learning_approach",
+        "content": "I learn best by doing. I prefer hands-on projects, coding challenges, and real-world problem-solving over purely theoretical study. I also find value in explaining concepts to others as a way to solidify my own understanding."
+    },
+    {
+        "category": "technical_interests",
+        "content": "I am particularly interested in backend systems, data visualization, and building full-stack web applications that combine clean system design with practical functionality. I enjoy working with Node.js, React, and modern development tools."
+    },
+    {
+        "category": "teamwork",
+        "content": "I work well both independently and in team environments. During college, I also organized Srijan'24, the annual cultural fest, and Parakram'24, the sports fest, which sharpened my coordination and leadership skills."
+    },
+    {
+        "category": "decision_making",
+        "content": "When making technical decisions, I consider trade-offs between simplicity, performance, and maintainability. I prefer solutions that are easy to reason about and scale over overly complex optimizations."
+    },
+    {
+        "category": "misconceptions",
+        "content": "A common misconception people might have about me is that because I focus heavily on algorithms and competitive programming, I might not care about design or user experience. In reality, I put a lot of thought into UI/UX in my projects, like building responsive interfaces with Material-UI and Bootstrap."
+    },
+    {
+        "category": "pushing_limits",
+        "content": "I push my boundaries by taking on projects slightly outside my comfort zone. Building the Social Media App with Firebase real-time features and deploying it on Heroku, or tackling harder problems on Codeforces, are examples of how I deliberately stretch my skills."
+    },
+    {
+        "category": "social_engagements",
+        "content": "Outside of academics and coding, I have represented my state in swimming, and I also play cricket and table tennis. I organized Srijan'24 and Parakram'24 at IIT ISM Dhanbad, which gave me strong experience in event management and teamwork."
+    },
+    {
+        "category": "contact",
+        "content": "You can reach me at zayushshaw@gmail.com. My GitHub and LinkedIn profiles are linked on my resume."
+    }
+]

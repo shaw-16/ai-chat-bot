@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashank.ai</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app-container">
+        <h1>Shashank.ai</h1>
+        <p class="subtitle">Ask me anything about my background or experience.</p>
+
+        <div id="mic-container">
+            <button id="mic-btn" class="mic-btn">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 14C14.2091 14 16 12.2091 16 10V4C16 1.79086 14.2091 0 12 0C9.79086 0 8 1.79086 8 4V10C8 12.2091 9.79086 14 12 14Z"
+                        fill="white" />
+                    <path
+                        d="M19 10C19 13.866 15.866 17 12 17C8.13401 17 5 13.866 5 10H3C3 14.536 6.38407 18.2721 10.75 18.9134V22H13.25V18.9134C17.6159 18.2721 21 14.536 21 10H19Z"
+                        fill="white" />
+                </svg>
+            </button>
+            <div id="pulse-ring"></div>
+        </div>
+
+        <p id="status-text">Click the microphone to start.</p>
+    </div>
+
+    <!-- Overlay for Intro Autoplay Policy -->
+    <div id="intro-overlay">
+        <div class="overlay-content">
+            <h2>Welcome</h2>
+            <p>Click below to start the chat with shashank session.</p>
+            <button id="start-btn">Start Chat with Shashank</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
